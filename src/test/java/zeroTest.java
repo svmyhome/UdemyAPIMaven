@@ -1,4 +1,5 @@
 import io.qameta.allure.*;
+import io.qameta.allure.restassured.AllureRestAssured;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -15,14 +16,14 @@ public class zeroTest {
     @Description(value = "3.8.2 Для получения информации о своём профиле используется метод GET")
     @Severity(SeverityLevel.CRITICAL)
     public void MyFirstTest() {
-        given().log().uri().
+        given().filter(new AllureRestAssured()).log().uri().
                 when().get("https://swapi.dev/api/people/1").
                 then().log().body().statusCode(200);
     }
 
     @Test
     public void SecondTest() {
-        given().log().uri().
+        given().filter(new AllureRestAssured()).log().uri().
                 when().get("https://swapi.dev/api/people/2").
                 then().log().body().statusCode(200);
     }

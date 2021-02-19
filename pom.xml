@@ -17,6 +17,7 @@
         <slf4j.version>1.7.30</slf4j.version>
         <io.rest-assured.version>4.3.3</io.rest-assured.version>
         <junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
+        <allure-rest-assured.version>2.13.8</allure-rest-assured.version>
     </properties>
     <dependencies>
         <dependency>
@@ -54,6 +55,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-rest-assured</artifactId>
+            <version>${allure-rest-assured.version}</version>
         </dependency>
     </dependencies>
 
